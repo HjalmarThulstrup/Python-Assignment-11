@@ -7,7 +7,7 @@ def download_image(url):
     try:
         with urllib.urlopen(url) as dlFile:
             content = dlFile.read()
-            filename = urlparse.urlparse(url).path.replace('/', '') + ".png"
+            filename = "faces.png"
             file = open(filename, "wb")
             file.write(content)
             file.close
